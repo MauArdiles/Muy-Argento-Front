@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, ErrorPage, AboutUs, Contact } from "./Pages/Index";
+import { Home, ErrorPage, AboutUs, Contact, Store } from "./Pages/Index";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/Home" element={<Home />} errorElement={<ErrorPage />} />
+        <Route path="/" element={<Home />} errorElement={<ErrorPage />} />
         <Route
           path="/AboutUs"
           element={<AboutUs />}
@@ -16,6 +16,7 @@ function App() {
           element={<Contact />}
           errorElement={<ErrorPage />}
         />
+        <Route path="/Store" element={<Store />} errorElement={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
   );

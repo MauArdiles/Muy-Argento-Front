@@ -14,17 +14,18 @@ export const Translate = () => {
       fluid="true"
       style={{
         backgroundColor: "#3CB4F9",
-        border: "2px solid",
+        border: "1px solid white",
         borderColor: "white",
       }}
     >
       <Row xs={2} md={2}>
         <Col
           style={{
-            width: "80%",
+            width: "70%",
             marginTop: "1em",
-            textAlign: "center",
+            textAlign: "end",
             color: "white",
+            fontSize: "20px",
           }}
         >
           PRODUCTOS 100% ARGENTINOS PARA EL MUNDO
@@ -32,12 +33,18 @@ export const Translate = () => {
         <Col
           style={{
             marginTop: "0.5em",
-            width: "20%",
-            alignItems: "center",
+            width: "30%",
           }}
         >
           <Nav>
-            <Figure style={{ display: "flex", flexFlow: "row" }}>
+            <Figure
+              style={{
+                paddingLeft: "5em",
+                display: "flex",
+                flexFlow: "row",
+                justifyContent: "end",
+              }}
+            >
               <Nav.Link href="/home">
                 <Figure.Image alt="FrenchFlag" src={frenchFlag} />
               </Nav.Link>
