@@ -1,8 +1,13 @@
+/* eslint-disable react/prop-types */
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
-import PropTypes from "prop-types";
+import { useCart } from "../../Hooks/useCart";
 
 export const ProductCard = ({ product }) => {
+  const cart = useCart();
+  const handleClick = () => {
+    return cart.addToCart(product);
+  };
   return (
     <Card
       style={{
@@ -25,15 +30,11 @@ export const ProductCard = ({ product }) => {
       </Card.Body>
       <Card.Body>
         <div className="d-grid gap-1">
-          <Button variant="primary" size="sm">
+          <Button variant="primary" size="sm" onClick={handleClick}>
             Agregar al Carrito
           </Button>
         </div>
       </Card.Body>
     </Card>
   );
-};
-ProductCard.propTypes = {
-  props: PropTypes.node,
-  product: PropTypes.node,
 };

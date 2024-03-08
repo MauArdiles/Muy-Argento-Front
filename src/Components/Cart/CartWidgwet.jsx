@@ -15,7 +15,7 @@ export const CartWidget = () => {
       <Button
         variant="outline-primary"
         size="lg"
-        onClick={() => navigate("/cartPage")}
+        onClick={() => navigate("/CartPage")}
       >
         {/* Carrito: {productsCount} */}Carrito
       </Button>

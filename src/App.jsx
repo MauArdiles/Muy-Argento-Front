@@ -1,5 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Home, ErrorPage, AboutUs, Contact, Store } from "./Pages/Index";
+import {
+  Home,
+  ErrorPage,
+  AboutUs,
+  Contact,
+  Store,
+  CartPage,
+} from "./Pages/Index";
 
 function App() {
   return (
@@ -17,6 +24,11 @@ function App() {
           errorElement={<ErrorPage />}
         />
         <Route path="/Store" element={<Store />} errorElement={<ErrorPage />} />
+        <Route
+          path="/CartPage"
+          element={<CartPage />}
+          errorElement={<ErrorPage />}
+        />
       </Routes>
     </BrowserRouter>
   );
